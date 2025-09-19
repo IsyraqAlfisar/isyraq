@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isyraq Alfisar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        .box {
+            width: 150px;
+            height: 100px;
+            margin: 10px;
+            color: white;
+         
+        }
+
+        .static {
+            background-color: blueviolet;
+            position: static; 
+        }
+
+        .relative {
+            background-color: darkred;
+            position: relative; 
+            top: -10px;
+        }
+        
+        
+        .relative-orange {
+            background-color: rgb(231, 119, 67);
+            position: relative;
+            left: 20px;
+            top: -50px;
+        }
+
+        .absolute-parent {
+            background-color: indianred;
+            position: relative; 
+            height: 300px;
+            width: 500px;
+            margin-top: 50px; 
+        }
+
+        .absolute-child {
+            background-color: indigo;
+            position: absolute; 
+            height: 150px;
+            width: 300px;
+            top: 50%;
+            left: 370px;
+            transform: translate(-50%, -50%); 
+        }
+
+        .fixed {
+            background-color: darkgreen;
+            position: fixed; 
+            right: -10px;
+        
+        }
+    </style>
+</head>
+<body>
+    <div class="box static">
+        It's a static div!
+    </div>
+
+    <div class="box relative">
+        It's a relative div!
+    </div>
+    
+    <div class="box relative-orange">
+        It's a relative div!
+    </div>
+
+    <div class="box absolute-parent">
+        <p>It's a relative div!</p>
+        <div class="absolute-child">
+            <p>It's an absolute div with relative parent!</p>
+        </div>
+    </div>
+
+    <div class="box fixed">
+        It's a fixed div!
+    </div>
+</body>
+</html>
